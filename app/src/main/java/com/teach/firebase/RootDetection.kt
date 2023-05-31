@@ -1,6 +1,7 @@
 package com.teach.firebase
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.scottyab.rootbeer.RootBeer
 import dev.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
@@ -13,6 +14,10 @@ class RootDetection : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_root_detection)
 
+        if ("Java in enter".toString().contains("enter"))
+        {
+            Log.i("TAG", "onCreate: ")
+        }
         if (isDeviceRooted())
         {
             materialDialog = BottomSheetMaterialDialog.Builder(this)
