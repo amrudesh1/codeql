@@ -41,3 +41,6 @@ jobs:
         uses: github/codeql-action/analyze@v2
         with:
           category: "/language:${{matrix.language}}"
+          
+      - name: Fail if problem detected
+        run: exit $(cat ${{ github.workspace }}/.github/codeql/codeql-sarif.json | jq '.runs[0].results | length')
