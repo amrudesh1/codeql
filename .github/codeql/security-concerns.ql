@@ -1,3 +1,9 @@
+/**
+ * @kind problem
+ * @id java/sec-concerns
+ */
+
+
 import java
 
 from StringLiteral sl
