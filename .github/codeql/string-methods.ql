@@ -1,3 +1,8 @@
+/**
+ * @kind problem
+ * @id java/string-methods
+ */
+
 import java
 
 from MethodAccess ma
