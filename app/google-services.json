@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "612035246634",
+    "project_id": "hackthebase",
+    "storage_bucket": "hackthebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612035246634:android:7f193dc21833cc730c6153",
+        "android_client_info": {
+          "package_name": "com.teach.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612035246634-8v74g6dc5m19l59mmvsb8cta95fic5rc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD09MMNAYpVGHuIS_UrjdHQUnSlU4GAJHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612035246634-8v74g6dc5m19l59mmvsb8cta95fic5rc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612035246634:android:6c54c9095f914f4b0c6153",
+        "android_client_info": {
+          "package_name": "com.schneider.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612035246634-8v74g6dc5m19l59mmvsb8cta95fic5rc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD09MMNAYpVGHuIS_UrjdHQUnSlU4GAJHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612035246634-8v74g6dc5m19l59mmvsb8cta95fic5rc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

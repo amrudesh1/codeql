@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Firebasejump</string>
+    <string name="aws_pool">cognito-idp.region.amazonaws.com</string>
+</resources>
