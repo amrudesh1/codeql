@@ -1,3 +1,9 @@
+/**
+ * @kind problem
+ * @id java/annotations
+ */
+
+
 import java
 
 from Annotation a
