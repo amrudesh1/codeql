@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
@@ -33,9 +33,11 @@ jobs:
             then
               echo "Pattern '$PATTERN' found in $FILE on lines: $MATCH"
               MATCHES_FOUND=1
+              echo "Amrudesh your code worked"
             fi
           done
           if [ $MATCHES_FOUND -eq 1 ]
           then
+            echo "Code is exiting as I found the token"
             exit 1
           fi
