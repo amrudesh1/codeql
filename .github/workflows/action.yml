@@ -1,0 +1,41 @@
+name: 'Check PR for patterns'
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout code'
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: 'Get PR base commit'
+        id: base
+        run: |
+          echo "::set-output name=sha::$(git merge-base origin/${{ github.event.pull_request.base.ref }} ${{ github.event.pull_request.head.sha }})"
+
+      - name: 'Check files for patterns'
+        run: |
+          PATTERN=".contains"
+          MATCHES_FOUND=0
+          FILES=$(git diff --name-only ${{ steps.base.outputs.sha }} ${{ github.sha }} | grep -E '\.java$|\.kt$')
+          for FILE in $FILES
+          do
+            MATCH=$(grep -n "$PATTERN" $FILE) 
+            if [ ! -z "$MATCH" ]
+            then
+              echo "Pattern '$PATTERN' found in $FILE on lines: $MATCH"
+              MATCHES_FOUND=1
+            fi
+          done
+          if [ $MATCHES_FOUND -eq 1 ]
+          then
+            exit 1
+          fi
