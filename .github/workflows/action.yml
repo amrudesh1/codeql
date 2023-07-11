@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout code'
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
@@ -38,6 +38,6 @@ jobs:
           done
           if [ $MATCHES_FOUND -eq 1 ]
           then
-            echo "Code is exiting as I found the token"
+            echo "Let me exit as I found your pattern"
             exit 1
           fi
