@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Service Found", Toast.LENGTH_SHORT).show()
         }
 
+        val data = "home".contains("Home");
     }
 
 
